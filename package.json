@@ -14,11 +14,15 @@
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test"
+		"test:e2e": "playwright test",
+		"pb": "./pb/pocketbase serve",
+		"migrate": "./pb/pocketbase migrate",
+		"squash": "./pb/pocketbase collections"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
+		"@iconify/svelte": "^4.2.0",
 		"@playwright/test": "^1.49.1",
 		"@sveltejs/adapter-node": "^5.2.11",
 		"@sveltejs/kit": "^2.16.0",
@@ -43,5 +47,9 @@
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.0.0",
 		"vitest": "^3.0.0"
+	},
+	"dependencies": {
+		"daisyui": "^5.0.3",
+		"pocketbase": "^0.25.2"
 	}
 }
