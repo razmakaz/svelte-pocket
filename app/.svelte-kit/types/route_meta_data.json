@@ -1,0 +1,11 @@
+{
+	"/(auth)": [],
+	"/": [],
+	"/app": [],
+	"/app/(user)/profile": [],
+	"/hooks": [],
+	"/(auth)/login": [],
+	"/(auth)/register": [
+		"src/routes/(auth)/register/+server.ts"
+	]
+}
