@@ -62,7 +62,7 @@
 	{/if}
 	<input
 		{type}
-		class="input transition-colors duration-200 {state.error
+		class="input w-full transition-colors duration-200 {state.error
 			? 'input-error'
 			: ''} {state.hasBlurred && isValid ? 'input-success' : ''}"
 		bind:value

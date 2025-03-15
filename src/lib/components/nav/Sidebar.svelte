@@ -66,7 +66,8 @@
 	<div>
 		{@render navItem({
 			icon: 'ri:user-5-fill',
-			label: 'Profile'
+			label: 'Profile',
+			onclick: () => goto('/app/profile')
 		})}
 	</div>
 </div>

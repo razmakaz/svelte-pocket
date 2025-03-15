@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import Sidebar from '$lib/components/nav/Sidebar.svelte';
 	import Icon from '@iconify/svelte';
+	import Noty from '$lib/components/notifications/Noty.svelte';
 
 	let { children } = $props();
 
@@ -23,6 +24,7 @@
 
 {#if isAuthed}
 	<!-- svelte-ignore a11y_consider_explicit_label -->
+	<Noty />
 	<button
 		onclick={(e) => {
 			e.stopPropagation();
@@ -64,7 +66,7 @@
 			<div class="hidden lg:block">
 				<Sidebar />
 			</div>
-			<div class="bg-base-100 overflow-y-auto p-4">
+			<div class="bg-base-100 overflow-y-auto">
 				{@render children()}
 			</div>
 		</div>

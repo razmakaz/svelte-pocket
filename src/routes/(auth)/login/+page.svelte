@@ -23,11 +23,12 @@
 		e.preventDefault();
 
 		console.log(state.email, state.password);
-		CRAPI.pb
+		CRAPI.db
 			.collection('users')
 			.authWithPassword(state.email, state.password)
 			.then((res) => {
 				console.log('Logged in', res);
+				window.location.href = '/';
 			})
 			.catch((err: ClientResponseError) => {
 				console.error(JSON.stringify(err));
@@ -51,41 +52,39 @@
 	<div class="absolute -right-5 -bottom-10 flex items-center justify-center">
 		<div class="min-h-20 min-w-20 rounded-full bg-black"></div>
 	</div>
-	<div class="card bg-base-200 flex flex-col gap-4 p-4">
+	<div class="card bg-base-200 flex w-md flex-col gap-4 p-4">
 		<div>
 			<h1 class="text-2xl font-bold">Login</h1>
 			<h4 class="text-lg">Get started</h4>
 		</div>
-		<form class="flex flex-col gap-4" {onsubmit}>
-			<TextInput
-				bind:value={state.email}
-				label={'Email'}
-				required={true}
-				bind:isValid={state.emailValid}
-				validation={(input: string) => {
-					return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
-				}}
-				validationError={'Invalid email address'}
-			/>
+		<TextInput
+			bind:value={state.email}
+			label={'Email'}
+			required={true}
+			bind:isValid={state.emailValid}
+			validation={(input: string) => {
+				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
+			}}
+			validationError={'Invalid email address'}
+		/>
 
-			<TextInput
-				bind:value={state.password}
-				label={'Password'}
-				type="password"
-				bind:isValid={state.passwordValid}
-				required={true}
-				validation={(input: string) => {
-					return /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/.test(input);
-				}}
-				validationError={'Invalid password'}
-			/>
+		<TextInput
+			bind:value={state.password}
+			label={'Password'}
+			type="password"
+			bind:isValid={state.passwordValid}
+			required={true}
+			validation={(input: string) => {
+				return /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{12,}$/.test(input);
+			}}
+			validationError={'Invalid password'}
+		/>
 
-			<button class="btn btn-ghost text-left text-sm"> Forgot Password? </button>
+		<button class="btn btn-ghost text-left text-sm"> Forgot Password? </button>
 
-			<button disabled={!isValid} class="btn btn-primary" type="submit">Login</button>
-			<button class="btn btn-secondary" onclick={() => goto('/register')}>Create Account</button>
-		</form>
-		<LabeledBreak />
-		<div>asdf</div>
+		<button disabled={!isValid} class="btn btn-primary" onclick={onsubmit}>Login</button>
+		<button class="btn btn-secondary" onclick={() => goto('/register')}>Create Account</button>
+		<div class="divider my-0">OR</div>
+		<div class="text-center">Log In With Another Account</div>
 	</div>
 </div>
