@@ -44,7 +44,6 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_vite: string;
 	export const npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 	export const npm_config_init_version: string;
-	export const npm_package_scripts_squash: string;
 	export const HOME: string;
 	export const npm_package_devDependencies__eslint_js: string;
 	export const npm_package_devDependencies_eslint_plugin_svelte: string;
@@ -54,7 +53,6 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_svelte_check: string;
 	export const npm_config_version_tag_prefix: string;
 	export const npm_package_scripts_check: string;
-	export const npm_package_scripts_migrate: string;
 	export const npm_config_engine_strict: string;
 	export const npm_package_description: string;
 	export const npm_package_devDependencies_typescript: string;
@@ -82,7 +80,6 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_typescript_eslint: string;
 	export const npm_package_name: string;
 	export const npm_package_dependencies_pocketbase: string;
-	export const npm_package_scripts_pb: string;
 	export const npm_package_scripts_test_e2e: string;
 	export const MINIO_ROOT_PASSWORD: string;
 	export const npm_package_scripts_test_unit: string;
@@ -169,7 +166,6 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_vite: string;
 		npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 		npm_config_init_version: string;
-		npm_package_scripts_squash: string;
 		HOME: string;
 		npm_package_devDependencies__eslint_js: string;
 		npm_package_devDependencies_eslint_plugin_svelte: string;
@@ -179,7 +175,6 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_svelte_check: string;
 		npm_config_version_tag_prefix: string;
 		npm_package_scripts_check: string;
-		npm_package_scripts_migrate: string;
 		npm_config_engine_strict: string;
 		npm_package_description: string;
 		npm_package_devDependencies_typescript: string;
@@ -207,7 +202,6 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_typescript_eslint: string;
 		npm_package_name: string;
 		npm_package_dependencies_pocketbase: string;
-		npm_package_scripts_pb: string;
 		npm_package_scripts_test_e2e: string;
 		MINIO_ROOT_PASSWORD: string;
 		npm_package_scripts_test_unit: string;

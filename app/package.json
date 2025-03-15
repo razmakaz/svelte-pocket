@@ -1,5 +1,5 @@
 {
-	"name": "svelte-pocket",
+	"name": "app",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
@@ -14,10 +14,7 @@
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test",
-		"pb": "./pb/pocketbase migrate && ./pb/pocketbase serve",
-		"migrate": "./pb/pocketbase migrate",
-		"squash": "rm -dr ./pb/pb_migrations && mkdir ./pb/pb_migrations && ./pb/pocketbase migrate collections"
+		"test:e2e": "playwright test"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
